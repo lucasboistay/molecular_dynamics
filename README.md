@@ -27,7 +27,7 @@ cd molecular_dynamics
 ````
 
 Then, for good measure, it's always good to make a VirtualEnvironment (check [documentation](https://docs.python.org/3/library/venv.html#how-venvs-work)), if you don't have 
-the venv library install on your python, do :
+the venv library install on your python, do : 
 ````shell
 python -m pip install virtualenv
 ````
