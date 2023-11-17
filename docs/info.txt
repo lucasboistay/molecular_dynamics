@@ -1,0 +1,6 @@
+Documentation concernant les descripteurs utilisés pour la dynamique moléculaire:
+
+https://singroup.github.io/dscribe/latest/tutorials/descriptors/coulomb_matrix.html
+
+
+
