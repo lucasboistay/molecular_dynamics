@@ -52,6 +52,11 @@ Now, you can open and run the notebook
 jupyter notebook main.ipynb
 ````
 
+If you want to get the pdf of the notebook, you can use the command :
+````shell
+jupyter nbconvert --to webpdf main.ipynb
+````
+
 ## Data set
 
 ## Strategy
