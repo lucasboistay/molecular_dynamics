@@ -1,3 +1,7 @@
 jupyter>=1.0.0
-dscribe~2.1.0
-pydot==1.4.2
+numpy==1.26.2
+keras==3.0.0
+matplotlib==3.5.2
+pandas==1.4.4
+scikit-learn==1.0.2
+scipy==1.9.1
