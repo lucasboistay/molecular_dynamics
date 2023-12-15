@@ -1,23 +1,70 @@
-# Molecular Dynamics and Ab Initio Simulations : Developing a Predictive Model for Molecular Energy Configurations
+# Molecular Dynamics : AI for Physics
 
+## Table of Contents
+- [Abstract](#Abstract)
+- [Table of Contents](#Table-of-Contents)
+- [Data Description](#Data-Description)
+- [Methodology](#Methodology)
+- [Results](#Results)
+- [Conclusion](#Conclusion)
+- [References](#References)
+- [Requirements and Installation](#Requirements-and-Installation)
 
-This project involves utilizing results from ab initio molecular dynamics simulations to develop a model capable of predicting the energy associated with specific molecular configurations. It leverages two datasets: the first encompasses simulations on the dynamics of the Zundel ion (H2O-H-H2O), while the second focuses on a Mo2S4 aggregate. Each dataset contains about 10,000 atomic configurations and their corresponding potential energies, providing a comprehensive basis for accurate energy prediction in molecular systems.
+## Abstract
 
-<!-- TOC -->
-* [Molecular Dynamics and Ab Initio Simulations : Developing a Predictive Model for Molecular Energy Configurations](#molecular-dynamics-and-ab-initio-simulations--developing-a-predictive-model-for-molecular-energy-configurations)
-  * [Installation](#installation)
-  * [Data set](#data-set)
-  * [Strategy](#strategy)
-  * [Results](#results)
-  * [References](#references)
-    * [Videos](#videos)
-    * [Articles](#articles)
-    * [Books](#books)
-    * [Websites](#websites)
-    * [Others](#others)
-<!-- TOC -->
+This report discusses a project that uses ab initio molecular dynamics simulations to create
+predictive models for molecular energy levels. Two datasets are examined: one from simulations
+of the Zundel ion (H2O-H-H2O) and another from simulations of a Molybdenum-Sulfur (Mo2S4)
+aggregate, each comprising approximately 10,000 atomic configurations, along with their respective potential energy values. The main objective is to integrate this intricate physical data
+into models capable of accurately predicting energy levels. To achieve this, Linear and Neural
+Network models are employed alongside with Principal Component Analysis (PCA). While the
+results are promising for the Molybdenum-Sulfur dataset, challenges arise due to the lack of
+suitable descriptors for the Zundel ions, resulting in less favourable outcomes.
 
-## Installation
+## Table of Contents
+
+## Data Description
+The atomic configurations are stored in `.xyz` files, with each configuration represented by the element and its x, y, z position. For Mo2S4, the dataset includes 11,001 configurations, and for Zundel ions, 10,000 configurations. Energies are available in `.out` files, with units approximately in the order of eV for Mo2S4 and around Hartree for Zundel ions.
+
+![Mo2S4](./img/visualisation_3D/first_config_MO2S4.png)
+**Figure 1**: First configuration of the Mo2S4 dataset.
+
+![Zundel](./img/visualisation_3D/first_config_Zundel.png)
+**Figure 2**: First configuration of the Zundel dataset.
+
+## Methodology
+### Models Used
+1. **Naive Model**: Serves as a baseline for comparison.
+2. **Linear Model**: Employs linear regression to correlate atomic positions with potential energies.
+3. **Neural Network Model**: A more complex model with a 3-layer architecture.
+4. **Principal Component Analysis (PCA)**: Reduces data dimensionality while retaining significant variance.
+
+### Model Architectures
+- The Neural Network uses a 3-hidden-layer architecture (18-18-8 neurons) with ReLU activation for hidden layers and linear activation for the output layer.
+
+## Results
+- The models were evaluated using metrics like RMSE, MAE, and Pearson’s correlation coefficient.
+- Results show promise for the Mo2S4 dataset, but challenges remain for the Zundel ion dataset due to the complexity of its quantum description.
+
+## Conclusion
+
+This project was aimed at analysing the energies of Zundel and Molybdenum-Sulfur atomic configurations. Starting from analysing the raw data and filtering it, to develop models as Linear and even
+more complex as Neural Network. These datasets, being the position of every atom in the molecule,
+were then translated to another representation (here Coulomb Matrices). The Principal Component
+Analysis described a new space to carry our data and gave us a chance to lower the dimension of it.
+To conclude, the results are very promising for the Mo2S4 dataset, reaching a Pearson’s correlation coefficient squared (rpe)
+2 = 0.958. However, the Zundel dataset seems to not be easily describe
+by the Coulomb Matrix, certainly due to quantum mechanics playing a major role in the energy of a
+configuration. A forward task would be to try to describe it with Many-Body Tensor Representation
+(MBTR) or Smooth Overlap of Atomic Positions (SOAP) to overcome the lack of interesting results.
+
+## References
+1. M. Moog, S. Schaack, F. Pietrucci, and A. M. Saitta, **"Unsupervised exploration of MoS2 nanocluster configurations: structures, energetics, and electronic properties"**, The Journal of Physical Chemistry C, 2019.
+2. F. Mouhat, S. Sorella, R. Vuilleumier, A. M. Saitta, and M. Casula, **"Fully quantum description of the Zundel ion: combining variational quantum monte carlo with path integral langevin dynamics"**, Journal of Chemical Theory and Computation, 2017.
+3. A. B. Tchagang and J. J. Valdés, **"Prediction of the atomization energy of molecules using Coulomb Matrix and atomic composition in a bayesian regularized neural networks"**, Artificial Neural Networks and Machine Learning – ICANN 2019: Workshop and Special Sessions, 2019.
+4. L. Himanen, **"Dscribe: library of descriptors for machine learning in materials science"**, 2022.
+
+## Requirements and Installation
 
 To install, open in console (or Powershell on Windows) and copy : 
 
@@ -56,24 +103,3 @@ If you want to get the pdf of the notebook, you can use the command :
 ````shell
 jupyter nbconvert --to webpdf main.ipynb
 ````
-
-## Data set
-
-## Strategy
-
-## Results
-
-## References
-
-### Videos
-
-- [Brief Introduction to ab initio Molecular Dynamics (AIMD)](https://www.youtube.com/watch?v=BeUCOsGC_eM)
-- 
-
-### Articles
-
-### Books
-
-### Websites
-
-### Others
