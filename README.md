@@ -31,7 +31,7 @@ The atomic configurations are stored in `.xyz` files, with each configuration re
 ![Mo2S4](./img/visualisation_3D/first_config_MO2S4.png)
 **Figure 1**: First configuration of the Mo2S4 dataset.
 
-![Zundel](./img/visualisation_3D/first_config_Zundel.png)
+![Zundel](./img/visualisation_3D/first_config_zundel.png)
 **Figure 2**: First configuration of the Zundel dataset.
 
 ## Methodology
