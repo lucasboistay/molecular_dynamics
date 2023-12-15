@@ -29,10 +29,13 @@ suitable descriptors for the Zundel ions, resulting in less favourable outcomes.
 The atomic configurations are stored in `.xyz` files, with each configuration represented by the element and its x, y, z position. For Mo2S4, the dataset includes 11,001 configurations, and for Zundel ions, 10,000 configurations. Energies are available in `.out` files, with units approximately in the order of eV for Mo2S4 and around Hartree for Zundel ions.
 
 ![Mo2S4](./img/visualisation_3D/first_config_MO2S4.png)
-**Figure 1**: First configuration of the Mo2S4 dataset.
+
+**Figure 1**: First configuration of the Mo2S4 (Molybdenum atoms are represented
+in blue and Sulfur atoms in yellow).
 
 ![Zundel](./img/visualisation_3D/first_config_zundel.png)
-**Figure 2**: First configuration of the Zundel dataset.
+
+**Figure 2**: First configuration of the Zundel dataset (Hydrogen atoms are represented in white and Oxygen in red).
 
 ## Methodology
 ### Models Used
