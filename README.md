@@ -57,8 +57,7 @@ This project was aimed at analysing the energies of Zundel and Molybdenum-Sulfur
 more complex as Neural Network. These datasets, being the position of every atom in the molecule,
 were then translated to another representation (here Coulomb Matrices). The Principal Component
 Analysis described a new space to carry our data and gave us a chance to lower the dimension of it.
-To conclude, the results are very promising for the Mo2S4 dataset, reaching a Pearson’s correlation coefficient squared (rpe)
-2 = 0.958. However, the Zundel dataset seems to not be easily describe
+To conclude, the results are very promising for the Mo2S4 dataset, reaching a Pearson’s correlation coefficient squared r² = 0.958. However, the Zundel dataset seems to not be easily describe
 by the Coulomb Matrix, certainly due to quantum mechanics playing a major role in the energy of a
 configuration. A forward task would be to try to describe it with Many-Body Tensor Representation
 (MBTR) or Smooth Overlap of Atomic Positions (SOAP) to overcome the lack of interesting results.
