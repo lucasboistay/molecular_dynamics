@@ -102,3 +102,5 @@ Now, you can open and run the notebook
 ````shell
 jupyter notebook main.ipynb
 ````
+
+For the Coulomb Matrices, it's important to have the dscribe library installed. Then, use the ./generate_txt.ipynb notebook to generate the .txt files with an older version of numpy (Need numpy 1.21.6 for dscribe and the last version for keras).
